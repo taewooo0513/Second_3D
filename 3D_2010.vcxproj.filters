@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{a43c5c25-0e86-4a20-b64a-883785ff74fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
+      <Extensions>fx;fxh;hlsl</Extensions>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{58dbaedb-150f-4325-b1b4-18b1504e1070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{44bd519b-6dec-45fe-8db8-d8c8576950fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\3DRender">
+      <UniqueIdentifier>{ad7c2583-82a6-44be-9217-fadc4dac5a20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\2DRender">
+      <UniqueIdentifier>{cc44a7c7-e027-4d5f-9c40-5a331d1f89e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Scene">
+      <UniqueIdentifier>{cd0387e8-4e09-4ffe-8122-6a6a67e7ed07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Object">
+      <UniqueIdentifier>{ab8f767c-66d4-4f43-aecb-76993167b745}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Loader">
+      <UniqueIdentifier>{88bdd816-5cac-4e91-a5c8-7260bbdbbe3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Cam">
+      <UniqueIdentifier>{ec1886d9-0673-405d-8ea0-c7d1627b8d97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Timer">
+      <UniqueIdentifier>{5ccf6418-0643-4490-9f2d-30ff266306b1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DXUT\Optional\directx.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <ClInclude Include="DXUT\Core\DXUT.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTenum.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClCompile Include="DXUT\Core\DXUT.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTenum.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClInclude Include="DXUT\Optional\DXUTcamera.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTgui.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTres.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTsettingsdlg.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmesh.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClCompile Include="DXUT\Optional\DXUTcamera.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTgui.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTres.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTsettingsdlg.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmesh.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3D.cpp" />
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="cRenderManager.cpp">
+      <Filter>Manager\3DRender</Filter>
+    </ClCompile>
+    <ClCompile Include="cImageManager.cpp">
+      <Filter>Manager\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="Render2DManager.cpp">
+      <Filter>Manager\2DRender</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Manager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Manager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>Manager\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Manager\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="cMeshLoader.cpp">
+      <Filter>Manager\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="CamManager.cpp">
+      <Filter>Manager\Cam</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Manager\Timer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CLInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </CLInclude>
+    <ResourceCompile Include="3D.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ClInclude Include="main.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="cRenderManager.h">
+      <Filter>Manager\3DRender</Filter>
+    </ClInclude>
+    <ClInclude Include="cImageManager.h">
+      <Filter>Manager\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="Render2DManager.h">
+      <Filter>Manager\2DRender</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Manager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Manager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>Manager\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Manager\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="cMeshLoader.h">
+      <Filter>Manager\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="CamManager.h">
+      <Filter>Manager\Cam</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Manager\Timer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
