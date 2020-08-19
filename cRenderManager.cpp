@@ -82,6 +82,6 @@ void cRenderManager::Render(Mesh * mesh, Vec3 Pos, Vec3 Sclae, Vec3 Rot)
 		else
 			g_Device->SetTexture(0, nullptr);
 
-		mesh->LPD3DMesh->DrawSubset(i);
+		mesh->lpD3DXMesh->DrawSubset(i);
 	}
 }

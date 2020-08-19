@@ -129,82 +129,7 @@
 //--------------------------------------------------------------------------------------
 // Structs
 //--------------------------------------------------------------------------------------
-class Texture
-{
-public:
-	Texture(LPDIRECT3DTEXTURE9 texturePtr, D3DXIMAGE_INFO info)
-		:texturePtr(texturePtr), info(info)
-	{
-	};
-	LPDIRECT3DTEXTURE9 texturePtr;
-	D3DXIMAGE_INFO info;
-};
 
-struct Mesh
-{
-	bool bNoneDelete = false;
-	LPD3DXMESH LPD3DMesh;
-	vector<sMaterial * >vMaterial;
-	sMaterial * GetMaterial(int index)
-	{
-		return vMaterial[index];
-	}
-
-	Texture * GetDiffuseMap(int index)
-	{
-		return vMaterial[index]->DiffuseMap;
-	}
-	Texture* GetSpecularMap(int index)
-	{
-		return vMaterial[index]->specularMap;
-	}
-
-	~Mesh()
-	{
-		for (auto Iter : vMaterial)
-			SAFE_DELETE(Iter);
-
-		vMaterial.clear();
-
-		SAFE_RELEASE(LPD3DMesh);
-	}
-};
-
-struct VERTEX
-{
-	D3DXVECTOR3 position;
-	D3DXVECTOR3 normal;
-	D3DXVECTOR2 texcoord;
-	VERTEX(D3DXVECTOR3 v1, D3DXVECTOR3 v2, D3DXVECTOR2 v3)
-		:position(v1), normal(v2), texcoord(v3)
-	{
-
-	}
-	~VERTEX() {}
-};
-
-struct CacheEntry
-{
-	UINT index;
-	CacheEntry* pNext;
-};
-
-struct sMaterial
-{
-	string mtlName;
-	D3DMATERIAL9 material;
-	Texture * DiffuseMap = nullptr;
-	Texture * specularMap = nullptr;
-	float fAlpha;
-	float fIllum;
-	float fNs;
-
-	sMaterial()
-		:fAlpha(1.f), fIllum(0.f), fNs(0.f)
-	{
-		material.Power = 1;
-	}
-};
 
 struct DXUTD3D9DeviceSettings
 {
@@ -421,7 +346,9 @@ void      WINAPI DXUTDestroyState(); // Optional method to destroy DXUT's memory
 //--------------------------------------------------------------------------------------
 #include "DXUTmisc.h"
 #include "DXUTenum.h"
+
 #include "../../stdafx.h"
+auto __vsnwprintf = _vsnwprintf;
 
 #endif
 

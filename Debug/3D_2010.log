@@ -47,24 +47,54 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): w
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55899): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\winerror.h(55908): note: 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(147): error C2143: 구문 오류: ';'이(가) '<' 앞에 없습니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(147): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(147): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(148): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(148): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(149): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(155): error C2065: 'vMaterial': 선언되지 않은 식별자입니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(159): error C2065: 'vMaterial': 선언되지 않은 식별자입니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(164): error C2065: 'vMaterial': 선언되지 않은 식별자입니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(164): error C3312: no callable 'begin' function found for type 'unknown-type'
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(164): error C3312: no callable 'end' function found for type 'unknown-type'
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(165): error C2065: 'Iter': 선언되지 않은 식별자입니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(165): error C2541: 'delete': 포인터가 아닌 개체를 삭제할 수 없습니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(167): error C2065: 'vMaterial': 선언되지 않은 식별자입니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(194): error C3646: 'mtlName': 알 수 없는 재정의 지정자입니다.
-c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.h(194): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-c:\users\taewo\desktop\directxsamples\3d\crendermanager.h(15): warning C4324: 'cRenderManager': 맞춤 지정자 때문에 구조체가 채워졌습니다.
+c:\users\taewo\desktop\directxsamples\3d\cammanager.h(10): warning C4324: 'CamManager': 맞춤 지정자 때문에 구조체가 채워졌습니다.
+c:\users\taewo\desktop\directxsamples\3d\crendermanager.h(16): warning C4324: 'cRenderManager': 맞춤 지정자 때문에 구조체가 채워졌습니다.
 c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.cpp(696): warning C4838: 'UINT'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
 c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.cpp(697): warning C4838: 'UINT'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
 c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxut.cpp(4961): warning C4996: 'GetVersionExW': deprecated로 선언되었습니다.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\sysinfoapi.h(387): note: 'GetVersionExW' 선언을 참조하십시오.
+  3D.cpp
+  CamManager.cpp
+  DXUTenum.cpp
+  DXUTmisc.cpp
+c:\users\taewo\desktop\directxsamples\3d\dxut\core\dxutmisc.cpp(1263): warning C4996: 'GetVersionExA': deprecated로 선언되었습니다.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\sysinfoapi.h(378): note: 'GetVersionExA' 선언을 참조하십시오.
+  DXUTcamera.cpp
+  DXUTgui.cpp
+c:\users\taewo\desktop\directxsamples\3d\dxut\optional\dxutgui.cpp(6846): warning C4458: 'iTexture' 선언은 클래스 멤버를 숨깁니다.
+  c:\users\taewo\desktop\directxsamples\3d\dxut\optional\dxutgui.h(109): note: 'CDXUTElement::iTexture' 선언을 참조하십시오.
+c:\users\taewo\desktop\directxsamples\3d\dxut\optional\dxutgui.cpp(6860): warning C4458: 'iFont' 선언은 클래스 멤버를 숨깁니다.
+  c:\users\taewo\desktop\directxsamples\3d\dxut\optional\dxutgui.h(110): note: 'CDXUTElement::iFont' 선언을 참조하십시오.
+c:\users\taewo\desktop\directxsamples\3d\dxut\optional\dxutgui.cpp(6860): warning C4458: 'dwTextFormat' 선언은 클래스 멤버를 숨깁니다.
+  c:\users\taewo\desktop\directxsamples\3d\dxut\optional\dxutgui.h(111): note: 'CDXUTElement::dwTextFormat' 선언을 참조하십시오.
+  DXUTres.cpp
+  DXUTsettingsdlg.cpp
+  SDKmesh.cpp
+  SDKmisc.cpp
+  SDKsound.cpp
+  SDKwavefile.cpp
+  Object.cpp
+  ObjectManager.cpp
+  Render2DManager.cpp
+c:\users\taewo\desktop\directxsamples\3d\render2dmanager.cpp(39): warning C4244: '인수': 'float'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\taewo\desktop\directxsamples\3d\render2dmanager.cpp(44): warning C4244: '인수': 'float'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\taewo\desktop\directxsamples\3d\render2dmanager.cpp(45): warning C4244: '인수': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Scene.cpp
+  SceneManager.cpp
+  SoundManager.cpp
+  Timer.cpp
+  cImageManager.cpp
+c:\users\taewo\desktop\directxsamples\3d\cimagemanager.cpp(24): warning C4245: '인수': 'int'에서 'DWORD'(으)로의 변환입니다. signed 또는 unsigned가 일치하지 않습니다.
+c:\users\taewo\desktop\directxsamples\3d\cimagemanager.cpp(24): warning C4245: '인수': 'int'에서 'UINT'(으)로의 변환입니다. signed 또는 unsigned가 일치하지 않습니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  cMeshLoader.cpp
+c:\users\taewo\desktop\directxsamples\3d\cmeshloader.cpp(370): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(2263): note: 'sscanf' 선언을 참조하십시오.
+  cRenderManager.cpp
+c:\users\taewo\desktop\directxsamples\3d\crendermanager.cpp(41): warning C4189: 'Attribute': 지역 변수가 초기화되었으나 참조되지 않았습니다.
+c:\users\taewo\desktop\directxsamples\3d\crendermanager.cpp(73): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  main.cpp
+  코드를 생성하고 있습니다...
+CamManager.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
+  3D_2010.vcxproj -> C:\Users\taewo\Desktop\DirectXSamples\3D\Debug\3D.exe

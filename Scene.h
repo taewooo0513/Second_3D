@@ -1,5 +1,15 @@
 #pragma once
-class Scene
+class Scene abstract
 {
+public:
+	Scene();
+	virtual ~Scene();
+public:
+	virtual void Init() PURE;
+	virtual void Update() PURE;
+	virtual void Render() PURE;
+	virtual void UIRender() PURE;
+	virtual void Release() PURE;
+
 };
 

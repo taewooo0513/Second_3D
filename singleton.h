@@ -17,7 +17,7 @@ public:
 	static void ReleaseInstance()
 	{
 		if (p)
-			p = delete p;
+			 delete p;
 		p = nullptr;
 	}
 };

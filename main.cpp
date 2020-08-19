@@ -15,19 +15,31 @@ void main::Init()
 
 void main::Update()
 {
+	SCENE->Update();
+	OBJ->Update();
 }
 
 void main::Render()
 {
 	
+	SCENE->Render();
+	OBJ->Render();
 	RENDER2D->Begin();
-
-
+	SCENE->UIRender();
+	OBJ->UIRender();
 	RENDER2D->End();
 }
 
 void main::Release()
 {
+	SoundManager::ReleaseInstance();
+	cMeshLoader::ReleaseInstance();
+	cImageManager::ReleaseInstance();
+	ObjectManager::ReleaseInstance();
+	SceneManager::ReleaseInstance();
+	CamManager::ReleaseInstance();
+	cRenderManager::ReleaseInstance();
+	Render2DManager::ReleaseInstance();
 }
 
 void main::ResetDevice()

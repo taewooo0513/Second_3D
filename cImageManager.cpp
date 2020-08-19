@@ -8,6 +8,12 @@ cImageManager::cImageManager()
 
 cImageManager::~cImageManager()
 {
+	for (auto iter : image)
+	{
+		SAFE_DELETE(iter.second);
+	}
+	image.clear();
+	SAFE_DELETE(Loader);
 }
 
 Texture * cImageManager::AddImage(const string key, const string path)
@@ -15,13 +21,13 @@ Texture * cImageManager::AddImage(const string key, const string path)
 	auto find = image.find(key);
 	if (find == image.end())
 	{
-		if (D3DXCreateTextureFromFileExA(g_Device, path.c_str, -2, -2, 0, 0, D3DFMT_UNKNOWN, D3DPOOL_DEFAULT, -1, -1, 0, &info, nullptr, &texturePtr) == S_OK)
+		if (D3DXCreateTextureFromFileExA(g_Device, path.c_str(), -2, -2, 0, 0, D3DFMT_UNKNOWN, D3DPOOL_DEFAULT, -1, -1, 0, &info, nullptr, &texturePtr) == S_OK)
 		{
 			Texture * text = new Texture(texturePtr, info);
 			image[key] = text;
 			return text;
 		}
-		return;
+		return nullptr;
 	}
 	return find->second;
 }
@@ -31,7 +37,7 @@ Texture * cImageManager::FindImage(const string key)
 	auto find = image.find(key);
 	if (find== image.end())
 	{
-		return;
+		return nullptr;
 	}
 	return find->second;
 }

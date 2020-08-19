@@ -371,8 +371,9 @@ void cMeshLoader::ObjLoad(Mesh * mesh, const string & objpath, const string & ma
 
 				VERTEX* vertex = new VERTEX(
 					Pos[iPosition - 1],
-					Normal[iNormal - 1],
-					TexCoord[iTexCoord - 1]);
+					TexCoord[iTexCoord - 1]
+					,Normal[iNormal - 1]
+					);
 				
 				DWORD index = AddVerTex(iPosition, vertex);
 				Index.push_back(index);
@@ -415,6 +416,6 @@ void cMeshLoader::ObjLoad(Mesh * mesh, const string & objpath, const string & ma
 		}
 	}
 
-	return Create(&mesh->LPD3DMesh);
+	return Create(&mesh->lpD3DXMesh);
 
 }
