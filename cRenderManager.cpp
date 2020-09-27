@@ -51,6 +51,9 @@ cRenderManager::cRenderManager()
 	D3DXMatrixOrthoLH(&matProj, WINSIZEX, WINSIZEY, 0, 100);
 	D3DXMatrixPerspectiveFovLH(&matProj, D3DXToRadian(60), 16.f / 9.f, 1.f, 50000.f);
 	g_Device->SetTransform(D3DTS_PROJECTION, &matProj);
+	D3DXMATRIXA16 matView;
+	D3DXMatrixLookAtLH(&matView, &D3DXVECTOR3(0, 0, 0) ,&D3DXVECTOR3(0, 0, 10) , &D3DXVECTOR3(0.f, 1.f, 0.f));
+	g_Device->SetTransform(D3DTS_WORLD, &matView);
 }
 
 cRenderManager::~cRenderManager()

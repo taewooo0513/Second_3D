@@ -392,6 +392,8 @@
     <ClCompile Include="cRenderManager.cpp" />
     <ClCompile Include="DXUT\Optional\SDKsound.cpp" />
     <ClCompile Include="DXUT\Optional\SDKwavefile.cpp" />
+    <ClCompile Include="ExObject.cpp" />
+    <ClCompile Include="ExScene.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
@@ -406,6 +408,8 @@
     <ClInclude Include="cRenderManager.h" />
     <ClInclude Include="DXUT\Optional\SDKsound.h" />
     <ClInclude Include="DXUT\Optional\SDKwavefile.h" />
+    <ClInclude Include="ExObject.h" />
+    <ClInclude Include="ExScene.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="Render2DManager.h" />

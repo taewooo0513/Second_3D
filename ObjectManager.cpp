@@ -15,6 +15,7 @@ void ObjectManager::Update()
 	for (auto iter : listObj)
 	{
 		iter->Update();
+
 	}
 }
 

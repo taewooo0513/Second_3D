@@ -7,6 +7,7 @@ SceneManager::SceneManager()
 
 SceneManager::~SceneManager()
 {
+	Release();
 }
 
 Scene * SceneManager::AddScene(string key, Scene * scene)

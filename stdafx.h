@@ -30,6 +30,10 @@ public:
 		:texturePtr(texturePtr), info(info)
 	{
 	}
+	~Texture()
+	{
+	
+	};
 	LPDIRECT3DTEXTURE9 texturePtr;
 	D3DXIMAGE_INFO info;
 };
@@ -51,6 +55,11 @@ struct Material
 	{
 		material.Power = 1;
 	}
+	~Material() { 
+	
+	}
+
+
 };
 
 struct Mesh
@@ -73,7 +82,7 @@ struct Mesh
 	{
 		return vMaterial[index]->specularMap;
 	}
-
+	Mesh() {}
 	~Mesh()
 	{
 		for (auto iter : vMaterial)
@@ -94,7 +103,9 @@ struct VERTEX
 	VERTEX(D3DXVECTOR3 _pos, D3DXVECTOR2 _tex, D3DXVECTOR3 _normal)
 		:pos(_pos), tex(_tex), normal(_normal)
 	{}
-	VERTEX() {}
+	~VERTEX() {  
+	
+	}
 };
 
 struct CacheEntry

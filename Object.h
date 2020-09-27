@@ -3,7 +3,7 @@ class Object abstract
 {
 public:
 	Object();
-	~Object();
+	virtual ~Object();
 public:
 	virtual void Update() PURE;
 	virtual void Render() PURE;

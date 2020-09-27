@@ -157,6 +157,8 @@
     <ClCompile Include="SoundManager.cpp">
       <Filter>Core\Manager\Sound</Filter>
     </ClCompile>
+    <ClCompile Include="ExObject.cpp" />
+    <ClCompile Include="ExScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -213,6 +215,8 @@
     <ClInclude Include="SoundManager.h">
       <Filter>Core\Manager\Sound</Filter>
     </ClInclude>
+    <ClInclude Include="ExObject.h" />
+    <ClInclude Include="ExScene.h" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

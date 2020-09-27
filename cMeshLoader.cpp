@@ -81,7 +81,7 @@ void cMeshLoader::MeshLoad(const string & key, Mesh * mesh, const string & mapPa
 		return;
 	}
 	Material * lpMtl = nullptr;
-	D3DMATERIAL9 * d3dMtl = nullptr;
+	D3DMATERIAL9 * d3dMtl = nullptr; 
 	bool findMtl = false;
 	while (!mtlLoader.eof())
 	{
@@ -99,7 +99,9 @@ void cMeshLoader::MeshLoad(const string & key, Mesh * mesh, const string & mapPa
 					mesh->vMaterial.push_back(lpMtl);
 					d3dMtl = &lpMtl->material;
 					findMtl = true;
+					
 				}
+				
 			}
 
 		}
@@ -231,7 +233,6 @@ void cMeshLoader::MeshLoad(const string & key, Mesh * mesh, const string & mapPa
 				break;
 		}
 	}
-
 	mtlLoader.close();
 
 
@@ -304,6 +305,12 @@ DWORD cMeshLoader::AddVerTex(UINT hash, VERTEX * pVerTex)
 			}
 
 			pCurEntry->pNext = pNewEntry;
+			
+
+		}
+		if (pNewEntry == nullptr)
+		{
+			SAFE_DELETE(pNewEntry);
 		}
 	}
 

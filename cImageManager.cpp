@@ -10,9 +10,15 @@ cImageManager::~cImageManager()
 {
 	for (auto iter : image)
 	{
+		iter.second->texturePtr->Release();
 		SAFE_DELETE(iter.second);
 	}
 	image.clear();
+	for (auto iter : mMesh)
+	{
+		SAFE_DELETE(iter.second);
+	}
+	mMesh.clear();
 	SAFE_DELETE(Loader);
 }
 
@@ -52,7 +58,8 @@ Mesh * cImageManager::AddMesh(const string key, const string path)
 	Mesh*mesh = new Mesh;
 	Loader->ObjLoad(mesh, path);
 	mMesh[key] = mesh;
-	return mesh;
+ 	return mMesh[key];
+
 }
 
 Mesh * cImageManager::FindMesh(const string key)

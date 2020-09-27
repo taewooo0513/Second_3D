@@ -1,6 +1,6 @@
 #include "DXUT.h"
 #include "main.h"
-
+#include "ExScene.h"
 main::main()
 {
 }
@@ -11,6 +11,10 @@ main::~main()
 
 void main::Init()
 {
+	IMAGE->AddImage("SEX","./resource/Object001CompleteMap.png");
+	IMAGE->AddMesh("c","./resource/MAN.obj");
+	SCENE->AddScene("EX",new ExScene);
+	SCENE->ChangeScene("EX");
 }
 
 void main::Update()
@@ -32,9 +36,9 @@ void main::Render()
 
 void main::Release()
 {
-	SoundManager::ReleaseInstance();
-	cMeshLoader::ReleaseInstance();
 	cImageManager::ReleaseInstance();
+	cMeshLoader::ReleaseInstance();
+	SoundManager::ReleaseInstance();
 	ObjectManager::ReleaseInstance();
 	SceneManager::ReleaseInstance();
 	CamManager::ReleaseInstance();
