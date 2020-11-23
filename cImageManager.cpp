@@ -1,9 +1,9 @@
 #include "DXUT.h"
 #include "cImageManager.h"
+#include <mutex>
 
 cImageManager::cImageManager()
 {
-	Loader = new cMeshLoader;
 }
 
 cImageManager::~cImageManager()
@@ -19,16 +19,19 @@ cImageManager::~cImageManager()
 		SAFE_DELETE(iter.second);
 	}
 	mMesh.clear();
-	SAFE_DELETE(Loader);
 }
 
+mutex imageMutex;
 Texture * cImageManager::AddImage(const string key, const string path)
 {
 	auto find = image.find(key);
 	if (find == image.end())
 	{
+		LPDIRECT3DTEXTURE9 texturePtr;
+		D3DXIMAGE_INFO info;
 		if (D3DXCreateTextureFromFileExA(g_Device, path.c_str(), -2, -2, 0, 0, D3DFMT_UNKNOWN, D3DPOOL_DEFAULT, -1, -1, 0, &info, nullptr, &texturePtr) == S_OK)
 		{
+			lock_guard<mutex> lock(imageMutex);
 			Texture * text = new Texture(texturePtr, info);
 			image[key] = text;
 			return text;
@@ -48,6 +51,7 @@ Texture * cImageManager::FindImage(const string key)
 	return find->second;
 }
 
+mutex meshMutex;
 Mesh * cImageManager::AddMesh(const string key, const string path)
 {
 	auto find = mMesh.find(key);
@@ -56,7 +60,9 @@ Mesh * cImageManager::AddMesh(const string key, const string path)
 		return find->second;
 	}
 	Mesh*mesh = new Mesh;
-	Loader->ObjLoad(mesh, path);
+	cMeshLoader loader;
+	loader.ObjLoad(mesh, path);
+	lock_guard<mutex> lock(meshMutex);
 	mMesh[key] = mesh;
  	return mMesh[key];
 
