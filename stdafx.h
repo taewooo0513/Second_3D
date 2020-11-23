@@ -82,7 +82,9 @@ struct Mesh
 	{
 		return vMaterial[index]->specularMap;
 	}
-	Mesh() {}
+	Mesh()
+		: lpD3DXMesh(nullptr)
+	{}
 	~Mesh()
 	{
 		for (auto iter : vMaterial)
