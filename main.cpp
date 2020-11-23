@@ -1,6 +1,6 @@
 #include "DXUT.h"
 #include "main.h"
-#include "ExScene.h"
+
 main::main()
 {
 }
@@ -13,7 +13,7 @@ void main::Init()
 {
 	IMAGE->AddImage("SEX","./resource/Object001CompleteMap.png");
 	IMAGE->AddMesh("c","./resource/MAN.obj");
-	SCENE->AddScene("EX",new ExScene);
+
 	SCENE->ChangeScene("EX");
 }
 
