@@ -1,7 +1,6 @@
 #pragma once
-#include "singleton.h"
 
-class cMeshLoader : public singleton<cMeshLoader>
+class cMeshLoader
 {
 private:
 	string objPath;

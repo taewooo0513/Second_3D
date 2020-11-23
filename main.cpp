@@ -37,7 +37,6 @@ void main::Render()
 void main::Release()
 {
 	cImageManager::ReleaseInstance();
-	cMeshLoader::ReleaseInstance();
 	SoundManager::ReleaseInstance();
 	ObjectManager::ReleaseInstance();
 	SceneManager::ReleaseInstance();
