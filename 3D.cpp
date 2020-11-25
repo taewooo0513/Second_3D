@@ -30,6 +30,7 @@ bool CALLBACK IsD3D9DeviceAcceptable( D3DCAPS9* pCaps, D3DFORMAT AdapterFormat, 
 //--------------------------------------------------------------------------------------
 bool CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, void* pUserContext )
 {
+    pDeviceSettings->d3d9.BehaviorFlags |= D3DCREATE_MULTITHREADED;
     return true;
 }
 
@@ -138,7 +139,7 @@ INT WINAPI wWinMain( HINSTANCE, HINSTANCE, LPWSTR, int )
     // TODO: Perform any application-level initialization here
 
     // Initialize DXUT and create the desired Win32 window and Direct3D device for the application
-    DXUTInit( true, true ); // Parse the command line and show msgboxes
+    DXUTInit( true, true, nullptr, true ); // Parse the command line and show msgboxes
     DXUTSetHotkeyHandling( true, true, true );  // handle the default hotkeys
     DXUTSetCursorSettings( true, true ); // Show the cursor and clip it when in full screen
     DXUTCreateWindow( L"3D" );

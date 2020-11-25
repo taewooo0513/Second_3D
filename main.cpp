@@ -1,6 +1,7 @@
 #include "DXUT.h"
 #include "main.h"
-#include "ExScene.h"
+#include <thread>
+
 main::main()
 {
 }
@@ -11,9 +12,16 @@ main::~main()
 
 void main::Init()
 {
-	IMAGE->AddImage("SEX","./resource/Object001CompleteMap.png");
-	IMAGE->AddMesh("c","./resource/MAN.obj");
-	SCENE->AddScene("EX",new ExScene);
+	thread t1([]() {
+		IMAGE->AddMesh("t1", "./resource/47-obj/obj/Handgun_obj.obj"); 
+	});
+	thread t2([]() {
+		IMAGE->AddMesh("t2", "./resource/72-rigged_hand_obj/Rigged Hand.obj");
+	});
+	t1.detach();
+
+	t2.detach();
+
 	SCENE->ChangeScene("EX");
 }
 
@@ -37,7 +45,6 @@ void main::Render()
 void main::Release()
 {
 	cImageManager::ReleaseInstance();
-	cMeshLoader::ReleaseInstance();
 	SoundManager::ReleaseInstance();
 	ObjectManager::ReleaseInstance();
 	SceneManager::ReleaseInstance();
